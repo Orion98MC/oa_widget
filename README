@@ -8,7 +8,7 @@ This widget is the base for other OA widgets.
 Pre-requisits
 =============
 
-Rails 2.3.8+, see: http://ruby-on-rails.org
+Rails 2.3.8+, see: http://rubyonrails.org/
 Apotomo, see: http://apotomo.de
 
 
