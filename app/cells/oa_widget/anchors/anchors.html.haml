@@ -1,0 +1,4 @@
+%div{:id => "#{@cell.name}", :class => "oa_notes anchors"}
+  - @anchors.each_with_index do |anchor, index|
+    = "|" if (index > 0 && index < @anchors.count)
+    = link_to anchor.to_s.titleize, url_for_event(anchor.to_sym), :class => 'action_link'

@@ -1,0 +1,27 @@
+OAWidget for rails
+========
+
+OAWidget as in "Orion's Apotomo Widget"
+This widget is the base for other OA widgets.
+
+
+Pre-requisits
+=============
+
+Rails 2.3.8+, see: http://ruby-on-rails.org
+Apotomo, see: http://apotomo.de
+
+
+Install
+=======
+
+$ cd my_rails_app
+$ ./script/plugins install <path-of-the-git-repository>
+
+Then, you have to sync the public resources of the plugin to your app's public directory:
+
+$ rake oa_widget:sync_resources
+
+
+
+Copyright (c) 2010 Thierry Passeron (thierry.passeron@gmail.com), released under the MIT license
