@@ -27,7 +27,7 @@ module OAWidget
     private
     def setup_anchors
       @anchors = []
-      @anchors << :save if parent.saveable?      
+      @anchors << :save
     end
   
   end
