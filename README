@@ -34,7 +34,7 @@ in app/views/layouts/application.html.haml
 ...
   %head
     ...
-	= javascript_include_tag 'jquery-1.4.2.min'
+    = javascript_include_tag 'jquery-1.4.2.min'
     = javascript_tag "jQuery.noConflict();"
 
 
