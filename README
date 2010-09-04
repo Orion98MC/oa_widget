@@ -10,17 +10,33 @@ Pre-requisits
 
 Rails 2.3.8+, see: http://rubyonrails.org/
 Apotomo, see: http://apotomo.de
+jQuery, see: http://jquery.com/
 
 
 Install
 =======
 
 $ cd my_rails_app
-$ ./script/plugins install <path-of-the-git-repository>
+$ ./script/plugins install git://github.com/Orion98MC/oa_widget.git
 
 Then, you have to sync the public resources of the plugin to your app's public directory:
 
 $ rake oa_widget:sync_resources
+
+
+
+! Important note About jQuery !
+-------------------------------
+
+AOWidget uses jQuery. If you use prototype which is the default in rails 2.3.8, then add the following to your application layout file:
+
+in app/views/layouts/application.html.haml
+...
+  %head
+    ...
+	= javascript_include_tag 'jquery-1.4.2.min'
+    = javascript_tag "jQuery.noConflict();"
+
 
 
 
