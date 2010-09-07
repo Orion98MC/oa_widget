@@ -10,7 +10,7 @@ div.oa_widget {
 	-webkit-box-shadow: 0px 5px 10px #444;
 }
 
-div.oa_widget.oa_notes p.widget_title {
+div.oa_widget>p.widget_title {
 	background-color: #424242;
 	margin: 0;
 	padding: 3px 15px;
