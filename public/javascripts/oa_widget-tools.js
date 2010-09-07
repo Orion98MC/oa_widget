@@ -34,10 +34,12 @@ function patch_link_to_ajax_for_namespace(namespace, entity_name) {
 
 jQuery(function(){	
 	jQuery('.has_child_nubins').live("mouseover", function(){
-		jQuery(this).children(".nubins").show();	
+		var nubin = jQuery(this).children(".nubins.auto_hide.hidden");
+		nubin.removeClass('hidden');
 	});
 
 	jQuery('.has_child_nubins').live("mouseout", function(){
-		jQuery(this).children(".nubins").hide();
+		var nubin = jQuery(this).children(".nubins.auto_hide");
+		nubin.addClass('hidden');
 	});
 });

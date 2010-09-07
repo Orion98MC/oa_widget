@@ -1,6 +1,5 @@
 /* @override http://localhost:3002/stylesheets/oa_widget/oa_widget.css?1283515228 */
 
-
 div.oa_widget {
 	border: 1px solid #696969;
 	position: relative;
@@ -30,4 +29,15 @@ div.oa_widget div.filters {
 	right: 20px;
 	color: #a9a9a9;
 	font: 10px Verdana, "Lucida Grande", Lucida, sans-serif;
+}
+
+div.oa_widget div.filters>div {
+	display: inline;
+}
+
+div.oa_widget .hidden {
+	display: none;
+}
+
+div.oa_widget.auto_hide {
 }
