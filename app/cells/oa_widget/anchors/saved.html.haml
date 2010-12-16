@@ -1,7 +1,0 @@
-%div{:id => "#{@cell.name}", :class => "oa_notes anchors"}
-  %a{:style => "color: greenyellow;"} Saved!
-  
-:javascript
-  setTimeout(function() {
-    jQuery.ajax({url: '#{url_for_event(:anchors)}', data: savedParams('#{@cell.parent.name}'), type: 'POST', dataType: 'script'});
-  }, 800);
