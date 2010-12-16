@@ -1,21 +1,25 @@
-// Saved Params querying facility for the OWidget::Heartbeat widget
-// It returns a string with the saved params as a query string (ex: "&foo=bar ...")
+// Heartbeat Params querying facility for the OWidget::Heartbeat widget
+// It returns a string with the heartbeat params as a query string (ex: "&foo=bar ...")
 
-var saved_params = {};
+var heartbeat = {};
 
 /*
 	Usage:
-		savedParams("my_note_widget1") // Get the saved params for this namespace
+		heartbeat_serialize("my_note_widget1") // Get the heartbeat params for this namespace
 		or
-		savedParams("my_note_widget1", {foo: "bar"}) // Get the saved params for the my_note_widget1 namespace and merge with :foo => "bar"
+		heartbeat_serialize("my_note_widget1", {foo: "bar"}) // Get the heartbeat params for the my_note_widget1 namespace and merge with :foo => "bar"
 */
 
-function savedParams(namespace, hash) {
+function heartbeat_serialize(namespace, hash) {
+	if (typeof(heartbeat[namespace]) == 'undefined') {
+		return "";
+	}
   if (typeof(hash) != 'undefined') {
-    jQuery.extend(saved_params[namespace], hash);
+		// Merge the hash
+    jQuery.extend(heartbeat[namespace], hash);
   }
   returned = [];
-  jQuery.each(saved_params[namespace], function(key, value) {
+  jQuery.each(heartbeat[namespace], function(key, value) {
     if (value == null) {value = '';}
     returned.push(key + '=' + value);
   });

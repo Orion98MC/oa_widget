@@ -2,7 +2,7 @@ OAWidget for rails
 ========
 
 OAWidget as in "Orion's Apotomo Widget"
-This widget is the base for other OA widgets.
+Apotomo stateless widget for Rails with attributes persistence care taking.
 
 
 Pre-requisits
@@ -17,27 +17,11 @@ Install
 =======
 
 $ cd my_rails_app
-$ ./script/plugins install git://github.com/Orion98MC/oa_widget.git
+$ rails plugin install git://github.com/Orion98MC/oa_widget.git
 
 Then, you have to sync the public resources of the plugin to your app's public directory:
 
 $ rake oa_widget:sync_resources
-
-
-
-! Important note About jQuery !
--------------------------------
-
-AOWidget uses jQuery. If you use prototype which is the default in rails 2.3.8, then add the following to your application layout file:
-
-in app/views/layouts/application.html.haml
-...
-  %head
-    ...
-    = javascript_include_tag 'jquery-1.4.2.min'
-    = javascript_tag "jQuery.noConflict();"
-
-
 
 
 Copyright (c) 2010 Thierry Passeron (thierry.passeron@gmail.com), released under the MIT license
